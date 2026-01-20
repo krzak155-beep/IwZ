@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Prosta strona z zakładkami</title>
+    <style>
+        body {
+            background: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a onclick="showPage('menu')">Menu</a>
+    <a onclick="showPage('onas')">O nas</a>
+    <a onclick="showPage('dostawa')">Dostawa</a>
+    <a onclick="showPage('rezerwacja')">Rezerwacja</a>
+</nav>
+
+<main>
+    <section id="menu" class="page active">
+        <h2>Menu</h2>
+        <p>Tu wpiszesz swoje menu.</p>
+    </section>
+
+    <section id="onas" class="page">
+        <h2>O nas</h2>
+        <p>Informacje o firmie lub projekcie.</p>
+    </section>
+
+    <section id="dostawa" class="page">
+        <h2>Dostawa</h2>
+        <p>Opis dostawy, ceny, zasady.</p>
+    </section>
+
+    <section id="rezerwacja" class="page">
+        <h2>Rezerwacja</h2>
+        <p>Tu może być formularz lub instrukcja rezerwacji.</p>
+    </section>
+</main>
+
+<script>
+function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
