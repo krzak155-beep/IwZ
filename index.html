@@ -2,81 +2,222 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Prosta strona z zakładkami</title>
+    <title>Restauracja</title>
+
+    <!-- Ikonki Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
         body {
-            background: #f2f2f2;
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #fafafa;
+            color: #333;
         }
 
+        /* MENU GÓRNE */
         nav {
-            background: #333;
-            padding: 10px;
+            background: #ff6b35;
+            padding: 15px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         nav a {
             color: white;
-            margin: 0 15px;
+            margin: 0 20px;
+            font-size: 20px;
             text-decoration: none;
-            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
             cursor: pointer;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #ffe8d6;
+            transform: scale(1.1);
         }
 
+        /* STRONY */
         main {
-            padding: 20px;
+            padding: 40px;
         }
 
         .page {
             display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
         }
 
         .active {
             display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            color: #ff6b35;
+            margin-top: 0;
+        }
+
+        /* MENU JEDZENIA */
+        .menu-item {
+            background: white;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .menu-item img {
+            width: 120px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .menu-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* FORMULARZ */
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            background: #ff6b35;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #e85a2a;
         }
     </style>
 </head>
 <body>
 
 <nav>
-    <a onclick="showPage('menu')">Menu</a>
-    <a onclick="showPage('onas')">O nas</a>
-    <a onclick="showPage('dostawa')">Dostawa</a>
-    <a onclick="showPage('rezerwacja')">Rezerwacja</a>
+    <a onclick="showPage('menu')"><i class="fa-solid fa-utensils"></i> Menu</a>
+    <a onclick="showPage('onas')"><i class="fa-solid fa-info-circle"></i> O nas</a>
+    <a onclick="showPage('dostawa')"><i class="fa-solid fa-truck"></i> Dostawa</a>
+    <a onclick="showPage('rezerwacja')"><i class="fa-solid fa-calendar-check"></i> Rezerwacja</a>
 </nav>
 
 <main>
+
+    <!-- MENU -->
     <section id="menu" class="page active">
         <h2>Menu</h2>
-        <p>Tu wpiszesz swoje menu.</p>
+
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1601924582971-df6b0bbf0c57?auto=format&fit=crop&w=400&q=80">
+            <div>
+                <strong>Pizza Margherita</strong><br>
+                Klasyczna pizza z mozzarellą i bazylią — 24 zł
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80">
+            <div>
+                <strong>Burger Classic</strong><br>
+                Soczysty burger wołowy z frytkami — 29 zł
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?auto=format&fit=crop&w=400&q=80">
+            <div>
+                <strong>Sałatka Grecka</strong><br>
+                Świeże warzywa, feta, oliwki — 19 zł
+            </div>
+        </div>
     </section>
 
+    <!-- O NAS -->
     <section id="onas" class="page">
         <h2>O nas</h2>
-        <p>Informacje o firmie lub projekcie.</p>
+        <p>
+            Jesteśmy lokalną restauracją, która stawia na świeże składniki, domowe przepisy
+            i przyjazną atmosferę. Naszym celem jest tworzenie jedzenia, które zapamiętasz.
+        </p>
     </section>
 
+    <!-- DOSTAWA -->
     <section id="dostawa" class="page">
         <h2>Dostawa</h2>
-        <p>Opis dostawy, ceny, zasady.</p>
+        <p>
+            Dostarczamy jedzenie na terenie miasta w 30–45 minut.  
+            Minimalne zamówienie: 25 zł.
+        </p>
+        <p><i class="fa-solid fa-phone"></i> Zamów telefonicznie: <strong>555 123 456</strong></p>
     </section>
 
+    <!-- REZERWACJA -->
     <section id="rezerwacja" class="page">
-        <h2>Rezerwacja</h2>
-        <p>Tu może być formularz lub instrukcja rezerwacji.</p>
+        <h2>Rezerwacja stolika</h2>
+
+        <form onsubmit="alert('Dziękujemy! Rezerwacja została wysłana.'); return false;">
+            <label>Imię i nazwisko:</label>
+            <input type="text" required>
+
+            <label>Data:</label>
+            <input type="date" required>
+
+            <label>Godzina:</label>
+            <input type="time" required>
+
+            <label>Liczba osób:</label>
+            <input type="number" min="1" max="20" required>
+
+            <label>Dodatkowe informacje:</label>
+            <textarea rows="4"></textarea>
+
+            <button type="submit">Zarezerwuj</button>
+        </form>
     </section>
+
 </main>
 
 <script>
 function showPage(id) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
+    document.querySelectorAll('.page').forEach(p => {
+        p.classList.remove('active');
+    });
+
+    const page = document.getElementById(id);
+    page.classList.add('active');
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
 </script>
 
