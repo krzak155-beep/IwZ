@@ -302,24 +302,30 @@ button:hover {
     <section id="rezerwacja" class="page">
         <h2>Rezerwacja</h2>
 
-        <form onsubmit="alert('Dziękujemy! Rezerwacja została wysłana.'); return false;">
-            <label>Imię i nazwisko:</label>
-            <input type="text" required>
+<form action="https://formsubmit.co/j.krotki.946@studms.ug.edu.pl" method="POST">
 
-            <label>Data:</label>
-            <input type="date" required>
+    <input type="hidden" name="_subject" value="Nowa rezerwacja ze strony KOSTABOWL">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
 
-            <label>Godzina:</label>
-            <input type="time" required>
+    <label>Imię i nazwisko:</label>
+    <input type="text" name="imie_nazwisko" required>
 
-            <label>Liczba osób:</label>
-            <input type="number" min="1" max="20" required>
+    <label>Data:</label>
+    <input type="date" name="data" required>
 
-            <label>Dodatkowe informacje:</label>
-            <textarea rows="4"></textarea>
+    <label>Godzina:</label>
+    <input type="time" name="godzina" required>
 
-            <button type="submit">Zarezerwuj</button>
-        </form>
+    <label>Liczba osób:</label>
+    <input type="number" name="liczba_osob" min="1" max="20" required>
+
+    <label>Dodatkowe informacje:</label>
+    <textarea rows="4" name="informacje"></textarea>
+
+    <button type="submit">Zarezerwuj</button>
+</form>
+
     </section>
 
 </main>
