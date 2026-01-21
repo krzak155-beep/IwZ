@@ -121,13 +121,21 @@
         button:hover {
             background: #e85a2a;
         }
-        .bigbar {
+.bigbar {
     display: flex;
     align-items: center;
     padding: 25px 40px;
     height: 120px;
-    background: linear-gradient(to right, red 50%, green 50%);
+
+    background: linear-gradient(
+        to right,
+        #c94b4b 0%,   /* przygaszona czerwień */
+        #d36d6d 30%,  /* łagodne przejście */
+        #6bbf73 70%,  /* miękka zieleń */
+        #4caf50 100%  /* ciemniejsza zieleń */
+    );
 }
+
 
 .logo {
     height: 100px;
