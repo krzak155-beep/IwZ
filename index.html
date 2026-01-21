@@ -4,18 +4,63 @@
     <meta charset="UTF-8">
     <title>Restauracja</title>
 
-    <!-- Ikonki Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         body {
             margin: 0;
             font-family: "Segoe UI", Arial, sans-serif;
-            background: #fafafa;
+            background: #f4f4f4;
             color: #333;
         }
 
-            /* STRONY */
+        /* GÓRNY PASEK */
+.bigbar {
+    display: flex;
+    align-items: center;
+    padding: 25px 40px;
+    height: 120px;
+
+    background: linear-gradient(
+        to right,
+        #c94b4b 0%,
+        #d36d6d 30%,
+        #6bbf73 70%,
+        #4caf50 100%
+    );
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+        .logo {
+            height: 100px;
+            width: auto;
+            margin-right: 40px;
+            filter: drop-shadow(0 3px 4px rgba(0,0,0,0.3));
+        }
+
+        .navlinks a {
+            font-size: 26px;
+            font-weight: bold;
+            margin-left: 25px;
+            color: #fff8f8;
+            text-decoration: none;
+            padding: 10px 18px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            backdrop-filter: blur(3px);
+            transition: 0.25s;
+        }
+
+        .navlinks a:hover {
+            background: rgba(255, 255, 255, 0.28);
+            transform: translateY(-2px);
+        }
+
+        /* STRONY */
         main {
             padding: 40px;
         }
@@ -34,17 +79,19 @@
         }
 
         h2 {
-            color: #ff6b35;
+            color: #c94b4b;
             margin-top: 0;
+            font-size: 32px;
+            letter-spacing: 1px;
         }
 
         /* MENU JEDZENIA */
         .menu-item {
             background: white;
-            padding: 15px;
+            padding: 18px;
             margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
             transition: 0.3s;
             display: flex;
             align-items: center;
@@ -52,102 +99,82 @@
         }
 
         .menu-item img {
-            width: 120px;
-            height: 80px;
+            width: 130px;
+            height: 90px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 10px;
         }
 
         .menu-item:hover {
             transform: translateX(10px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.25);
         }
 
-        /* FORMULARZ */
+        /* FORMULARZ REZERWACJI */
         form {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 400px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            background: rgba(255, 255, 255, 0.75);
+            padding: 30px;
+            border-radius: 16px;
+            max-width: 450px;
+            margin: 20px auto;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        form label {
+            font-weight: bold;
+            margin-bottom: 6px;
+            display: block;
         }
 
         input, textarea {
             width: 100%;
-            padding: 10px;
-            margin: 8px 0 15px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 16px;
+            padding: 14px;
+            margin: 10px 0 20px;
+            border: 1px solid #bbb;
+            border-radius: 10px;
+            font-size: 17px;
+            background: rgba(255,255,255,0.9);
+            transition: 0.2s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #4caf50;
+            box-shadow: 0 0 6px rgba(76,175,80,0.4);
+            outline: none;
         }
 
         button {
-            background: #ff6b35;
+            width: 100%;
+            background: #4caf50;
             color: white;
-            padding: 12px 20px;
+            padding: 14px;
             border: none;
-            border-radius: 6px;
-            font-size: 18px;
+            border-radius: 10px;
+            font-size: 20px;
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.25s;
+            font-weight: bold;
         }
 
         button:hover {
-            background: #e85a2a;
+            background: #3e8e41;
+            transform: translateY(-2px);
         }
-.bigbar {
-    display: flex;
-    align-items: center;
-    padding: 25px 40px;
-    height: 120px;
-
-    background: linear-gradient(
-        to right,
-        #c94b4b 0%,   /* przygaszona czerwień */
-        #d36d6d 30%,  /* łagodne przejście */
-        #6bbf73 70%,  /* miękka zieleń */
-        #4caf50 100%  /* ciemniejsza zieleń */
-    );
-}
-
-
-.logo {
-    height: 100px;
-    width: auto;
-    margin-right: 40px;
-}
-
-.navlinks a {
-    font-size: 28px;
-    font-weight: bold;
-    margin-left: 30px;
-    color: #fff8f8; /* jaśniejszy, kremowy biały */
-    text-decoration: none;
-
-    padding: 8px 16px;
-    background: rgba(255, 255, 255, 0.15); /* delikatna kapsułka */
-    border-radius: 12px;
-    backdrop-filter: blur(3px); /* subtelny efekt szkła */
-    transition: 0.25s;
-}
-
-.navlinks a:hover {
-    background: rgba(255, 255, 255, 0.28);
-    transform: translateY(-2px);
-}
-
     </style>
 </head>
+
 <body>
+
 <header class="bigbar">
     <img src="logo.png" alt="Logo" class="logo">
-<nav class="navlinks">
-    <a onclick="showPage('menu')">Menu</a>
-    <a onclick="showPage('onas')">O nas</a>
-    <a onclick="showPage('dostawa')">Dostawa</a>
-    <a onclick="showPage('rezerwacja')">Rezerwacja</a>
-</nav>
-
+    <nav class="navlinks">
+        <a onclick="showPage('menu')">Menu</a>
+        <a onclick="showPage('onas')">O nas</a>
+        <a onclick="showPage('dostawa')">Dostawa</a>
+        <a onclick="showPage('rezerwacja')">Rezerwacja</a>
+    </nav>
 </header>
 
 <main>
@@ -194,7 +221,7 @@
     <section id="dostawa" class="page">
         <h2>Dostawa</h2>
         <p>
-            Dostarczamy jedzenie na terenie miasta w 30–45 minut.  
+            Dostarczamy jedzenie na terenie miasta w 30–45 minut.
             Minimalne zamówienie: 25 zł.
         </p>
         <p><i class="fa-solid fa-phone"></i> Zamów telefonicznie: <strong>555 123 456</strong></p>
