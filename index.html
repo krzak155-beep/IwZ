@@ -281,7 +281,7 @@ button:hover {
 
     <!-- REZERWACJA -->
     <section id="rezerwacja" class="page">
-        <h2>Rezerwacja stolika</h2>
+        <h2>Rezerwacja</h2>
 
         <form onsubmit="alert('Dziękujemy! Rezerwacja została wysłana.'); return false;">
             <label>Imię i nazwisko:</label>
@@ -306,6 +306,14 @@ button:hover {
 </main>
 
 <script>
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const target = this.getAttribute('href').replace('#', '');
+        document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+        document.getElementById(target).style.display = 'block';
+    });
+
 function showPage(id) {
     document.querySelectorAll('.page').forEach(p => {
         p.classList.remove('active');
