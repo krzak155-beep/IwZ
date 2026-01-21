@@ -110,58 +110,59 @@
             box-shadow: 0 4px 14px rgba(0,0,0,0.25);
         }
 
-        /* FORMULARZ REZERWACJI */
-        form {
-            background: rgba(255, 255, 255, 0.75);
-            padding: 30px;
-            border-radius: 16px;
-            max-width: 450px;
-            margin: 20px auto;
-            backdrop-filter: blur(6px);
-            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-            border: 1px solid rgba(255,255,255,0.4);
-        }
+/* FORMULARZ REZERWACJI – wersja poprawiona i symetryczna */
+form {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px 35px; /* równe marginesy lewo/prawo */
+    border-radius: 16px;
+    max-width: 480px;
+    margin: 20px auto;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.55);
+}
 
-        form label {
-            font-weight: bold;
-            margin-bottom: 6px;
-            display: block;
-        }
+form label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+}
 
-        input, textarea {
-            width: 100%;
-            padding: 14px;
-            margin: 10px 0 20px;
-            border: 1px solid #bbb;
-            border-radius: 10px;
-            font-size: 17px;
-            background: rgba(255,255,255,0.9);
-            transition: 0.2s;
-        }
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0 20px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    font-size: 17px;
+    background: rgba(255,255,255,0.95);
+    transition: 0.2s;
+}
 
-        input:focus, textarea:focus {
-            border-color: #4caf50;
-            box-shadow: 0 0 6px rgba(76,175,80,0.4);
-            outline: none;
-        }
+input:focus, textarea:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 6px rgba(76,175,80,0.4);
+    outline: none;
+}
 
-        button {
-            width: 100%;
-            background: #4caf50;
-            color: white;
-            padding: 14px;
-            border: none;
-            border-radius: 10px;
-            font-size: 20px;
-            cursor: pointer;
-            transition: 0.25s;
-            font-weight: bold;
-        }
+button {
+    width: 100%;
+    background: #4caf50;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.25s;
+    font-weight: bold;
+}
 
-        button:hover {
-            background: #3e8e41;
-            transform: translateY(-2px);
-        }
+button:hover {
+    background: #3e8e41;
+    transform: translateY(-2px);
+}
+
     </style>
 </head>
 
