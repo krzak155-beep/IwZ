@@ -15,25 +15,24 @@
         }
 
         /* GÓRNY PASEK */
-.bigbar {
-    display: flex;
-    align-items: center;
-    padding: 25px 40px;
-    height: 120px;
+        .bigbar {
+            display: flex;
+            align-items: center;
+            padding: 25px 40px;
+            height: 120px;
 
-    background: linear-gradient(
-        to right,
-        #c94b4b 0%,
-        #d36d6d 30%,
-        #6bbf73 70%,
-        #4caf50 100%
-    );
+            background: linear-gradient(
+                to right,
+                #c94b4b 0%,
+                #d36d6d 30%,
+                #6bbf73 70%,
+                #4caf50 100%
+            );
 
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
         .logo {
             height: 130px;
@@ -110,76 +109,76 @@
             box-shadow: 0 4px 14px rgba(0,0,0,0.25);
         }
 
-/* FORMULARZ REZERWACJI – wersja poprawiona i symetryczna */
-form {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 30px 35px; /* równe marginesy lewo/prawo */
-    border-radius: 16px;
-    max-width: 480px;
-    margin: 20px auto;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
-    border: 1px solid rgba(255,255,255,0.55);
-}
+        /* FORMULARZ REZERWACJI */
+        form {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px 35px;
+            border-radius: 16px;
+            max-width: 480px;
+            margin: 20px auto;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+            border: 1px solid rgba(255,255,255,0.55);
+        }
 
-form label {
-    font-weight: bold;
-    margin-bottom: 6px;
-    display: block;
-}
+        form label {
+            font-weight: bold;
+            margin-bottom: 6px;
+            display: block;
+        }
 
-input, textarea {
-    width: 100%;
-    padding: 14px;
-    margin: 10px 0 20px;
-    border: 1px solid #aaa;
-    border-radius: 10px;
-    font-size: 17px;
-    background: rgba(255,255,255,0.95);
-    transition: 0.2s;
-}
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0 20px;
+            border: 1px solid #aaa;
+            border-radius: 10px;
+            font-size: 17px;
+            background: rgba(255,255,255,0.95);
+            transition: 0.2s;
+        }
 
-input:focus, textarea:focus {
-    border-color: #4caf50;
-    box-shadow: 0 0 6px rgba(76,175,80,0.4);
-    outline: none;
-}
+        input:focus, textarea:focus {
+            border-color: #4caf50;
+            box-shadow: 0 0 6px rgba(76,175,80,0.4);
+            outline: none;
+        }
 
-button {
-    width: 100%;
-    background: #4caf50;
-    color: white;
-    padding: 14px;
-    border: none;
-    border-radius: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.25s;
-    font-weight: bold;
-}
+        button {
+            width: 100%;
+            background: #4caf50;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.25s;
+            font-weight: bold;
+        }
 
-button:hover {
-    background: #3e8e41;
-    transform: translateY(-2px);
-}
-.onas-logo-wrapper {
-    text-align: center;
-    margin: 20px 0 30px;
-}
+        button:hover {
+            background: #3e8e41;
+            transform: translateY(-2px);
+        }
 
-.onas-logo {
-    width: 180px;
-    height: auto;
-    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));
-    opacity: 0;
-    animation: fadeInLogo 1.2s ease forwards;
-}
+        .onas-logo-wrapper {
+            text-align: center;
+            margin: 20px 0 30px;
+        }
 
-@keyframes fadeInLogo {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-}
+        .onas-logo {
+            width: 180px;
+            height: auto;
+            filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));
+            opacity: 0;
+            animation: fadeInLogo 1.2s ease forwards;
+        }
 
+        @keyframes fadeInLogo {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
     </style>
 </head>
 
@@ -197,7 +196,7 @@ button:hover {
 
 <main>
 
-    <!-- MENU -->
+<!-- MENU -->
 <section id="menu" class="page active">
     <h2>Menu Oliwka pozdrawiam</h2>
 
@@ -323,7 +322,35 @@ button:hover {
 
 </section>
 
-    <!-- DOSTAWA -->
+<!-- O NAS -->
+<section id="onas" class="page">
+    <h2>O nas</h2>
+
+    <div class="onas-logo-wrapper">
+        <img src="logo.png" alt="Kostabowl Logo" class="onas-logo">
+    </div>
+
+    <p><strong>Kostabowl</strong> – najświeższe miejsce Kościerzyny, dosłownie i w przenośni!</p>
+
+    <p>
+        Jesteśmy nowym lokalem w samym centrum miasta, który tworzy dla Was zdrowe propozycje dań,
+        wychodząc naprzeciw wszystkim fast‑foodom. Nasze zestawy przygotowujemy z najświeższych produktów
+        i tak, aby można było je wygodnie zjeść w każdej lokalizacji – od przerwy na szkolnym korytarzu
+        po przerwę w biurze.
+    </p>
+
+    <p>
+        Jeśli szukasz miejsca do pracy lub spotkania ze znajomymi, zapraszamy do naszego lokalu
+        znajdującego się na ulicy Rynek 39 w Kościerzynie. Gwarantujemy szybkie przygotowanie posiłku
+        oraz piękne widoki na kościerski rynek.
+    </p>
+
+    <p>Nie możemy doczekać się spotkania z Tobą!</p>
+
+    <p class="signature">– ekipa <strong>KOSTABOWL</strong></p>
+</section>
+
+<!-- DOSTAWA -->
 <section id="dostawa" class="page">
     <h2>Dostawa</h2>
 
@@ -333,17 +360,17 @@ button:hover {
         Cena za dowóz: <strong>10 zł</strong>
     </p>
 
-    <p><i class="fa-solid fa-phone"></i> Zamów telefonicznie: 
+    <p><i class="fa-solid fa-phone"></i> Zamów telefonicznie:
         <strong>692 137 69</strong>
     </p>
 
     <h3>Nasza lokalizacja:</h3>
 
     <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.2); max-width: 600px;">
-        <iframe 
-            width="100%" 
-            height="350" 
-            style="border:0;" 
+        <iframe
+            width="100%"
+            height="350"
+            style="border:0;"
             loading="lazy"
             allowfullscreen
             referrerpolicy="no-referrer-when-downgrade"
@@ -352,50 +379,43 @@ button:hover {
     </div>
 </section>
 
+<!-- REZERWACJA -->
+<section id="rezerwacja" class="page">
+    <h2>Rezerwacja</h2>
 
-    <!-- REZERWACJA -->
-    <section id="rezerwacja" class="page">
-        <h2>Rezerwacja</h2>
+    <form action="https://formsubmit.co/p.szulc.655@studms.ug.edu.pl" method="POST">
 
-<form action="https://formsubmit.co/p.szulc.655@studms.ug.edu.pl" method="POST">
+        <input type="hidden" name="_subject" value="Nowa rezerwacja ze strony KOSTABOWL">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
 
-    <input type="hidden" name="_subject" value="Nowa rezerwacja ze strony KOSTABOWL">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_cc" value="j.krotki.946@studms.ug.edu.pl">
 
-    <!-- Julia w CC -->
-    <input type="hidden" name="_cc" value="j.krotki.946@studms.ug.edu.pl">
+        <input type="hidden" name="_next" value="https://krzak155-beep.github.io/IwZ/">
 
-    <!-- Powrót po wysłaniu -->
-    <input type="hidden" name="_next" value="https://krzak155-beep.github.io/IwZ/">
+        <label>Imię i nazwisko:</label>
+        <input type="text" name="imie_nazwisko" required>
 
-    <label>Imię i nazwisko:</label>
-    <input type="text" name="imie_nazwisko" required>
+        <label>Data:</label>
+        <input type="date" name="data" required>
 
-    <label>Data:</label>
-    <input type="date" name="data" required>
+        <label>Godzina:</label>
+        <input type="time" name="godzina" required>
 
-    <label>Godzina:</label>
-    <input type="time" name="godzina" required>
+        <label>Liczba osób:</label>
+        <input type="number" name="liczba_osob" min="1" max="20" required>
 
-    <label>Liczba osób:</label>
-    <input type="number" name="liczba_osob" min="1" max="20" required>
+        <label>Dodatkowe informacje:</label>
+        <textarea rows="4" name="informacje"></textarea>
 
-    <label>Dodatkowe informacje:</label>
-    <textarea rows="4" name="informacje"></textarea>
+        <button type="submit">Zarezerwuj</button>
+    </form>
 
-    <button type="submit">Zarezerwuj</button>
-</form>
-
-
-
-    </section>
+</section>
 
 </main>
 
 <script>
-
-// FUNKCJA PRZEŁĄCZANIA STRON
 function showPage(id) {
     document.querySelectorAll('.page').forEach(p => {
         p.classList.remove('active');
@@ -407,7 +427,6 @@ function showPage(id) {
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-// OBSŁUGA LINKÓW W SEKCJI "O NAS"
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function(e) {
         const target = this.getAttribute('href').replace('#', '');
@@ -418,9 +437,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         }
     });
 });
-
 </script>
-
 
 </body>
 </html>
