@@ -462,6 +462,28 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 </script>
+    <style>
+    .social-footer {
+        margin-top: 40px;
+        padding: 15px;
+        background: #222;
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .social-icon svg {
+        width: 22px;
+        height: 22px;
+        fill: #fff;
+        transition: 0.25s;
+    }
+
+    .social-icon:hover svg {
+        fill: #4caf50;
+        transform: scale(1.08);
+    }
+</style>
 <footer class="social-footer">
     <a href="#" class="social-icon" title="Facebook">
         <svg viewBox="0 0 24 24">
